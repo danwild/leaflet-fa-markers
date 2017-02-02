@@ -8,9 +8,8 @@ Very simple vector markers with FontAwesome icons, compatible with Leaflet v1.
 
 ```javascript
 var blueMarker = L.marker([lat, lon], {
-	icon: L.icon.fontAwesome({
-		prefix: 'fa', // you could probably add another icon lib prefix here, not tested.
-		icon: 'info-circle',
+	icon: L.icon.fontAwesome({ 
+		iconClasses: 'fa fa-info-circle', // you _could_ add other icon classes, not tested.
 		markerColor: '#00a9ce',
 		iconColor: '#FFF'
 	})
@@ -18,8 +17,7 @@ var blueMarker = L.marker([lat, lon], {
 
 var spinningMarker = L.marker([lat, lon], {
 	icon: L.icon.fontAwesome({
-		prefix: 'fa',
-		icon: 'circle-o-notch fa-spin',
+		iconClasses: 'fa fa-circle-o-notch fa-spin',
 		markerColor: '#ff89b5',
 		iconColor: '#FFF',
 		// use XY offsets to nudge positioning of icons, negative accepted

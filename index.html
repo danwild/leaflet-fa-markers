@@ -62,8 +62,7 @@
 
 	var blueMarker = L.marker([lat, lon], {
 		icon: L.icon.fontAwesome({
-			prefix: 'fa',
-			icon: 'info-circle',
+			iconClasses: 'fa fa-info-circle',
 			markerColor: '#00a9ce',
 			iconColor: '#FFF'
 		})
@@ -71,12 +70,11 @@
 
 	var spinningMarker = L.marker([lat + 10, lon + 5], {
 		icon: L.icon.fontAwesome({
-			prefix: 'fa',
-			icon: 'circle-o-notch fa-spin',
+			iconClasses: 'fa fa-circle-o-notch fa-spin',
 			markerColor: '#ff89b5',
 			iconColor: '#FFF',
 			iconXOffset: -2,
-			iconYOffset: 0,
+			iconYOffset: 0
 		})
 	}).addTo(map);
 

@@ -22,7 +22,7 @@ L.Icon.FontAwesome = L.Icon.extend({
 		var iconDiv = L.DomUtil.create('div', 'leaflet-fontawesome-markers');
 
 		// feature icon
-		var iconSpan = L.DomUtil.create('span', options.prefix+ ' '+ options.prefix +'-'+ options.icon  + ' feature-icon');
+		var iconSpan = L.DomUtil.create('span', options.iconClasses + ' feature-icon');
 		iconSpan.style.color = options.iconColor;
 		iconSpan.style.textAlign = 'center';
 
