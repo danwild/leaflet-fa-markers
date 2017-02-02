@@ -21,7 +21,7 @@ L.Icon.FontAwesome = L.Icon.extend({
 		var options = this.options;
 
 		// container div
-		var iconDiv = L.DomUtil.create('div', 'leaflet-fontawesome-markers');
+		var iconDiv = L.DomUtil.create('div', 'leaflet-fa-markers');
 
 		// feature icon
 		var iconSpan = L.DomUtil.create('span', options.iconClasses + ' feature-icon');

@@ -1,4 +1,4 @@
-.leaflet-fontawesome-markers {
+.leaflet-fa-markers {
     position: absolute;
     left: 0;
     top: 0;
@@ -10,11 +10,11 @@
     height: 50px;
 }
 
-.leaflet-fontawesome-markers .marker-icon-svg {
+.leaflet-fa-markers .marker-icon-svg {
     position: absolute;
 }
 
-.leaflet-fontawesome-markers .feature-icon {
+.leaflet-fa-markers .feature-icon {
     position: absolute;
     font-size: 20px;
     line-height: 0px;
