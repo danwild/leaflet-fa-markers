@@ -19,7 +19,7 @@
     position: absolute;
     font-size: 20px;
     line-height: 0px;
-    text-align: center;
-    margin-left: -7px;
-    margin-top: 16px;
+    left: 8px;
+    top: 16px;
+    display: inline-block;
 }

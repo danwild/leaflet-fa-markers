@@ -26,6 +26,10 @@ L.Icon.FontAwesome = L.Icon.extend({
 		iconSpan.style.color = options.iconColor;
 		iconSpan.style.textAlign = 'center';
 
+		// XY position adjustments
+		if(options.iconYOffset && options.iconYOffset != 0) iconSpan.style.marginTop = options.iconYOffset + 'px';
+		if(options.iconXOffset && options.iconXOffset != 0) iconSpan.style.marginLeft = options.iconXOffset + 'px';
+
 		// marker icon L.DomUtil doesn't seem to like svg, just append out html directly
 		var markerSvg = document.createElement('div');
 		markerSvg.className = "marker-icon-svg";
