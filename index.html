@@ -66,7 +66,7 @@
 			markerColor: '#00a9ce',
 			iconColor: '#FFF'
 		})
-	}).addTo(map);
+	}).bindPopup("Popup friendly!").addTo(map);
 
 	var spinningMarker = L.marker([lat + 10, lon + 5], {
 		icon: L.icon.fontAwesome({
@@ -76,7 +76,8 @@
 			iconXOffset: -2,
 			iconYOffset: 0
 		})
-	}).addTo(map);
+	}).bindPopup("I'm getting dizzy..").addTo(map);
+
 
 </script>
 
