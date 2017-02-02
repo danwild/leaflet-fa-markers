@@ -1,0 +1,25 @@
+.leaflet-fontawesome-markers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    text-align: center;
+    z-index: 99999;
+    margin-left: -15px;
+    margin-top: -50px;
+    width: 30px;
+    height: 50px;
+}
+
+.leaflet-fontawesome-markers .marker-icon-svg {
+    position: absolute;
+}
+
+.leaflet-fontawesome-markers .feature-icon {
+    position: absolute;
+    font-size: 20px;
+    line-height: 0px;
+    text-align: center;
+    margin-left: -7px;
+    margin-top: 16px;
+}

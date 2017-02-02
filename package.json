@@ -1,0 +1,26 @@
+{
+  "name": "leaflet-fontawesome-markers",
+  "version": "0.0.1",
+  "description": "Very simple vector markers with FontAwesome icons, compatible with Leaflet v1",
+  "main": "L.Icon.FontAwesome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danwild/leaflet-fontawesome-markers.git"
+  },
+  "keywords": [
+    "markers",
+    "fontawesome",
+    "leaflet",
+    "svg",
+    "vector"
+  ],
+  "author": "danwild@y7mail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/danwild/leaflet-fontawesome-markers/issues"
+  },
+  "homepage": "https://github.com/danwild/leaflet-fontawesome-markers#readme"
+}
