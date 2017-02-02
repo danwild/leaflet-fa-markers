@@ -1,11 +1,12 @@
-# leaflet-fontawesome-markers
+# leaflet-fontawesome-markers [![NPM version][npm-image]][npm-url]
 
 Very simple vector markers with FontAwesome icons, compatible with Leaflet v1.
+
+![Screenshot](/screenshots/markers.png?raw=true)
 
 ## Use:
 
 ```javascript
-
 var blueMarker = L.marker([lat, lon], {
 	icon: L.icon.fontAwesome({
 		prefix: 'fa', // you could probably add another icon lib prefix here, not tested.
@@ -26,5 +27,7 @@ var spinningMarker = L.marker([lat, lon], {
 		iconYOffset: 0,
 	})
 }).addTo(map);
-
 ```
+
+[npm-image]: https://badge.fury.io/js/leaflet-fontawesome-markers.svg
+[npm-url]: https://www.npmjs.com/package/leaflet-fontawesome-markers
