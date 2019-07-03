@@ -1,4 +1,4 @@
-# leaflet-fa-markers [![NPM version][npm-image]][npm-url]
+# leaflet-fa-markers [![NPM version][npm-image]][npm-url] [![NPM Downloads][npm-downloads-image]][npm-url]
 
 Very simple vector markers with FontAwesome icons, compatible with Leaflet v1.
 
@@ -29,3 +29,4 @@ var spinningMarker = L.marker([lat, lon], {
 
 [npm-image]: https://badge.fury.io/js/leaflet-fa-markers.svg
 [npm-url]: https://www.npmjs.com/package/leaflet-fa-markers
+[npm-downloads-image]: https://img.shields.io/npm/dt/leaflet-fa-markers.svg
