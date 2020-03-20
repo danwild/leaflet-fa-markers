@@ -23,6 +23,7 @@ L.Icon.FontAwesome = L.Icon.extend({
   /*------------------------------- PUBLIC -------------------------------*/
 
   setStyle: function(style) {
+    Object.assign(this.options, style);
     const path = this.markerSvg.getElementsByTagName("path")[0];
     const span = this.iconDiv.getElementsByTagName("span")[0];
     if (style.hasOwnProperty("markerColor"))
