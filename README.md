@@ -8,22 +8,22 @@ Very simple vector markers with FontAwesome icons, compatible with Leaflet v1.
 
 ```javascript
 var blueMarker = L.marker([lat, lon], {
-	icon: L.icon.fontAwesome({ 
-		iconClasses: 'fa fa-info-circle', // you _could_ add other icon classes, not tested.
-		markerColor: '#00a9ce',
-		iconColor: '#FFF'
-	})
+  icon: L.icon.fontAwesome({
+    iconClasses: "fa fa-info-circle", // you _could_ add other icon classes, not tested.
+    markerColor: "#00a9ce",
+    iconColor: "#FFF"
+  })
 }).addTo(map);
 
 var spinningMarker = L.marker([lat, lon], {
-	icon: L.icon.fontAwesome({
-		iconClasses: 'fa fa-circle-o-notch fa-spin',
-		markerColor: '#ff89b5',
-		iconColor: '#FFF',
-		// use XY offsets to nudge positioning of icons, negative accepted
-		iconXOffset: -2, 
-		iconYOffset: 0,
-	})
+  icon: L.icon.fontAwesome({
+    iconClasses: "fa fa-circle-o-notch fa-spin",
+    markerColor: "#ff89b5",
+    iconColor: "#FFF",
+    // use XY offsets to nudge positioning of icons, negative accepted
+    iconXOffset: -2,
+    iconYOffset: 0
+  })
 }).addTo(map);
 ```
 

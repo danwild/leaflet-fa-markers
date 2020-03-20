@@ -1,85 +1,90 @@
 <!-- https://github.com/danwild/wind-js-leaflet -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>L.Icon.FontAwesome Demo</title>
-	<meta charset="utf-8">
+  <head>
+    <title>L.Icon.FontAwesome Demo</title>
+    <meta charset="utf-8" />
 
-	<style>
-		body {
-			margin: 0px;
-		}
+    <style>
+      body {
+        margin: 0px;
+      }
 
-		a {
-			color: #3388ff;
-		}
+      a {
+        color: #3388ff;
+      }
 
-		#map {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			background-color: #333;
-		}
-	</style>
+      #map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
 
-</head>
-<body>
+    <!--vendor-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://npmcdn.com/leaflet@1.0.3/dist/leaflet.css"
+    />
+    <script src="https://npmcdn.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
 
-<div id="map"></div>
+    <!--wind-js-leaflet-->
+    <link rel="stylesheet" href="./L.Icon.FontAwesome.css" />
+    <script src="./L.Icon.FontAwesome.js"></script>
 
-<!--vendor-->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.3/dist/leaflet.css" />
-<script src="https://npmcdn.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!--demo-->
+    <script>
+      var Esri_DarkGreyCanvas = L.tileLayer(
+        "http://{s}.sm.mapstack.stamen.com/" +
+          "(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/" +
+          "{z}/{x}/{y}.png",
+        {
+          attribution:
+            "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, " +
+            "NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community"
+        }
+      );
 
-<!--wind-js-leaflet-->
-<link rel="stylesheet" href="./L.Icon.FontAwesome.css" />
-<script src="./L.Icon.FontAwesome.js"></script>
+      var lat = -41.43;
+      var lon = 147.1;
 
-<!--demo-->
-<script>
+      var map = L.map("map", {
+        layers: [Esri_DarkGreyCanvas]
+      });
 
-	var Esri_DarkGreyCanvas = L.tileLayer(
-			"http://{s}.sm.mapstack.stamen.com/" +
-			"(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/" +
-			"{z}/{x}/{y}.png",
-			{
-				attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, ' +
-				'NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-			}
-	);
+      map.setView([lat, lon], 3);
 
-	var lat = -41.43;
-	var lon = 147.1;
+      var blueMarker = L.marker([lat, lon], {
+        icon: L.icon.fontAwesome({
+          iconClasses: "fa fa-info-circle",
+          markerColor: "#00a9ce",
+          iconColor: "#FFF"
+        })
+      })
+        .bindPopup("Popup friendly!")
+        .addTo(map);
 
-	var map = L.map('map', {
-		layers: [Esri_DarkGreyCanvas]
-	});
-
-	map.setView([lat, lon], 3);
-
-	var blueMarker = L.marker([lat, lon], {
-		icon: L.icon.fontAwesome({
-			iconClasses: 'fa fa-info-circle',
-			markerColor: '#00a9ce',
-			iconColor: '#FFF'
-		})
-	}).bindPopup("Popup friendly!").addTo(map);
-
-	var spinningMarker = L.marker([lat + 10, lon + 5], {
-		icon: L.icon.fontAwesome({
-			iconClasses: 'fa fa-circle-o-notch fa-spin',
-			markerColor: '#ff89b5',
-			iconColor: '#FFF',
-			iconXOffset: -2,
-			iconYOffset: 0
-		})
-	}).bindPopup("I'm getting dizzy..").addTo(map);
-
-
-</script>
-
-</body>
+      var spinningMarker = L.marker([lat + 10, lon + 5], {
+        icon: L.icon.fontAwesome({
+          iconClasses: "fa fa-circle-o-notch fa-spin",
+          markerColor: "#ff89b5",
+          iconColor: "#FFF",
+          iconXOffset: -2,
+          iconYOffset: 0
+        })
+      })
+        .bindPopup("I'm getting dizzy..")
+        .addTo(map);
+    </script>
+  </body>
 </html>
