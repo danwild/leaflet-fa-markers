@@ -10,7 +10,12 @@ Very simple vector markers with FontAwesome icons, compatible with Leaflet v1.
 var blueMarker = L.marker([lat, lon], {
   icon: L.icon.fontAwesome({
     iconClasses: "fa fa-info-circle", // you _could_ add other icon classes, not tested.
+    // marker/background style
     markerColor: "#00a9ce",
+    markerFillOpacity: 0.2,
+    markerStrokeWidth: 1,
+    markerStrokeColor: "grey",
+    // icon style
     iconColor: "#FFF"
   })
 }).addTo(map);
@@ -25,7 +30,16 @@ var spinningMarker = L.marker([lat, lon], {
     iconYOffset: 0
   })
 }).addTo(map);
+
+// update existing
+blueMarker.options.icon.setStyle({ markerColor: "#F00" });
 ```
+
+## Public methods
+
+| method     | params     | description                           |
+| ---------- | ---------- | ------------------------------------- |
+| `setStyle` | `{Object}` | update the icon with new style config |
 
 [npm-image]: https://badge.fury.io/js/leaflet-fa-markers.svg
 [npm-url]: https://www.npmjs.com/package/leaflet-fa-markers

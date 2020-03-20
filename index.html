@@ -64,15 +64,29 @@
 
       map.setView([lat, lon], 3);
 
+      var blueIcon = L.icon.fontAwesome({
+        iconClasses: "fa fa-info-circle",
+        markerColor: "#00a9ce",
+        markerFillOpacity: 0.2,
+        markerStrokeWidth: 1,
+        markerStrokeColor: "grey",
+        iconColor: "#FFF"
+      });
       var blueMarker = L.marker([lat, lon], {
-        icon: L.icon.fontAwesome({
-          iconClasses: "fa fa-info-circle",
-          markerColor: "#00a9ce",
-          iconColor: "#FFF"
-        })
+        icon: blueIcon
       })
         .bindPopup("Popup friendly!")
         .addTo(map);
+
+      // setTimeout(() => {
+      //   blueMarker.options.icon.setStyle({
+      //     markerColor: "red",
+      //     markerFillOpacity: 1,
+      //     markerStrokeWidth: 2,
+      //     markerStrokeColor: "red"
+      //     iconColor: "#F00"
+      //   });
+      // }, 1000);
 
       var spinningMarker = L.marker([lat + 10, lon + 5], {
         icon: L.icon.fontAwesome({

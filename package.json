@@ -1,6 +1,6 @@
 {
   "name": "leaflet-fa-markers",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Very simple vector markers with FontAwesome icons, compatible with Leaflet v1",
   "main": "L.Icon.FontAwesome.js",
   "scripts": {
